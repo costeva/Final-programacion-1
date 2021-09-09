@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Programación I | Parcial 2 | Costedoat, Alexis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="estiloultimo.css" />
+</head>
+
+<body>
+
+	<header class="sticky-top">
+		<nav class=" d-flex navbar navbar-expand-md navbar-light colorNav bg-dark flex-row-reverse flex-md-row p-2">
+			<a class="navbar-brand order-2" href="#">
+				<h1 class="cabeza-logo h4">Snow Style</h1>
+			</a>
+			<button class=" order-3 navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+				data-target="#menuBurger" aria-controls="menuBurger" aria-expanded="false" aria-label="activar el menu">
+
+
+				<i class="fas fa-bars"></i>
+
+			</button>
+
+			<button id="#modalCarrito" class="btn carrito order-1 order-md-5" data-toggle="modal"
+				data-target="#modalCarrito">Ver
+				carrito</button>
+
+			<div class="collapse navbar-collapse order-4" id="menuBurger">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" id="snow" href="#snowboard">Snowboard <span
+								class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#esqui">Esquí <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#accesorios">Accesorios <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+
+			</div>
+
+		</nav>
+
+		<div class="container-fluid d-flex justify-content-center" id="minicarrito">
+				<div class="row col-12 text-center ">
+					<p class="col-6 pt-1 font-weight-bold "><span id="cantidadItem">0</span> Ítems</p>
+					<p class="col-6 pt-1 font-weight-bold">$<span id="precioTotal">0</span>  Total</p>
+				</div>
+		</div>
+
+	</header>
+	<main class="container">
+
+		<h2 class="pt-3">Productos</h2>
+		<!-- Generar el contenido del div#productos dinámicamente -->
+		<div class="row" id="productos">
+			<!-- aca van los productos por JS-->
+		</div>
+		<!--
+		<div class="modal " id="modalCarrito" tabindex="-1" role="dialog" aria-labelledby="TituloModal"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 id="TituloModal">Formulario de Pago</h5>
+						<button class="close" data-dismiss="modal" arial-label="cerrar">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="#" method="POST">
+							<div class="form-row col-12">
+								<div class="form-group col-12 col-md-6">
+									<label for="nombre">Nombre</label>
+									<input class="form-control" id="nombre" type="text"
+										placeholder="Ingrese su nombre..." required="" name="nombre">
+								</div>
+								<div class=" form-gropu col-12 col-md-6">
+									<label for="apellido">Apellido</label>
+									<input class="form-control" id="apellido" type="text"
+										placeholder="Ingrese su apellido..." required="" name="apellido">
+								</div>
+							</div>
+							<div class="form-row col-12">
+								<div class="form-gropu col-12 col-md-6">
+									<label for="email">Email</label>
+									<input class="form-control" id="email" type="email"
+										placeholder="correo electronico..." required="" name="email">
+								</div>
+								<div class=" form-gropu col-12 col-md-6">
+									<label for="telefono">Telefono</label>
+									<input class="form-control" id="telefono" type="tel" placeholder="telefono..."
+										required="" name="telefono">
+								</div>
+							</div>
+							<div class="form-row col-12">
+								<div class=" form-gropu col-12 col-md-6">
+									<label for="direccion">Dirección</label>
+									<input class="form-control" id="direccion" type="text"
+										placeholder="Domicilio de entrega..." required="" name="direccion">
+								</div>
+								<div class="form-gropu col-12 col-md-6">
+									<label for="fecha">Fecha de entrega</label>
+									<input class="form-control" id="fecha" type="text" placeholder="día de entrega..."
+										required="" name="fecha">
+								</div>
+							</div>
+							<div class="form-row col-12">
+								<div class="form-gropu col-12">
+									<label for="tarjeta">Tarjeta</label>
+									<input class="form-control" id="tarjeta" type="text"
+										placeholder="número de tarjeta..." required="" name="tarjeta">
+								</div>
+							</div>
+							<div class="form-row col-12">
+								<div class="form-gropu col-3">
+									<label for="mes">Mes</label>
+									<input class="form-control" id="Mes" type="text" placeholder="Mes" required=""
+										name="mes">
+								</div>
+								<div class="form-gropu col-3">
+									<label for="ano">Año</label>
+									<input class="form-control" id="ano" type="text" placeholder="Año" required=""
+										name="ano">
+								</div>
+								<div class="form-gropu col-3">
+									<label for="codigo">Código</label>
+									<input class="form-control" id="codigo" type="text" placeholder="Código..."
+										required="" name="codigo">
+								</div>
+								<div class=" form-gropu col-3">
+									<img class="img-tarjeta" src="img/tarjeta.svg"/>
+								</div>
+							</div>
+
+							<div class="form-row col-12">
+								<div class="form-gropu col-12">
+									<label for="titular">Nombre del Titular</label>
+									<input class="form-control" id="titular" type="text"
+										placeholder="nombre de tarjeta..." required="" name="titular">
+								</div>
+							</div>
+						</form>
+
+							<div class="modal-footer">
+								<button class="btn btn.warning" type="button">Cancelar</button>
+								<button class="btn btn.success" type="button">Seguir comprando</button>
+								<button class="btn btn.success" type="button">Finalizar Pago</button>
+
+							</div>
+					</div>
+				</div>
+			</div>
+
+-->
+
+
+
+
+
+		<!--
+
+	<div class="modal1 d-flex  justify-content-center flex-column align-middle">
+		<div  class="container modal-dialog  modal-xl bg-white  overflow-auto p-0">
+				<div class="modal-header">
+					<h5 id="TituloModal">Carrito de compras</h5>
+					<button class="close" data-dismiss="modal" arial-label="cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<table id="lista-carrito" class="u-full-width">
+						<thead>
+							<tr>
+								<th>Imagen</th>
+								<th>Nombre</th>
+								<th>Precio</th>
+								<th>Cantidad</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn.warning" type="button">Vaciar carrito</button>
+					<button class="btn btn.success" type="button">Finalizar compra</button>
+
+				</div>
+			
+		</div>
+	</div>
+
+-->
+
+	</main>
+	<footer class="foo-color container-fluid mt-4">
+		<div class="row logo-foo text-center ">
+			<div class="socialmedia col-12 col-sm-12  col-lg-12">
+				<ul class="justify-content-center list-inline  row py-sm-4">
+					<li class="list-inline-item" id="fb">
+						<a href="https://www.facebook.com">Facebook</a>
+					</li>
+					<li class="list-inline-item" id="ig">
+						<a href="https://www.instagram.com">Instagram</a>
+					</li>
+					<li class="list-inline-item" id="yt">
+						<a href="https://www.youtube.com">Youtube</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<script src="parcial.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
